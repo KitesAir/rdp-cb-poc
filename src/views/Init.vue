@@ -34,14 +34,24 @@ export default {
   name: 'Home',
   data() {
       return {
-          resId: this.$route.query.resId
+          resId: this.$route.query.resId,
+          amount: this.$route.query.amount,
+          back: this.$route.query.back,
       }
   },
   methods: {
     prepareUrl(){
-      this.axios.get('https://reqres.in/api/products/3').then((response) => {
+      this.axios({
+        method: 'post',
+        url: 'http://103.48.193.123:6699/reddot/payment',
+        data: {
+          reservationId: this.resId,
+          amount: this.amount,
+          targetUrl: this.back
+        }
+      }).then((response) => {
         console.log(response.data)
-        window.location.href = "https://google.com"
+        window.location.href = response.data
       })
     }
   },
