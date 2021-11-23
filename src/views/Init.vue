@@ -51,7 +51,7 @@ export default {
         }
       }).then((response) => {
         console.log(response.data)
-        //window.location.href = response.data.redirect
+        window.location.href = response.data.redirect
       })
     }
   },
