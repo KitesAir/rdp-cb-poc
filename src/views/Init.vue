@@ -42,7 +42,7 @@ export default {
     prepareUrl(){
       this.axios({
         method: 'post',
-        url: 'http://103.48.193.123:6699/reddot/payment',
+        url: 'https://rdp-cb.herokuapp.com/payment',
         data: {
           reservationId: this.resId,
           targetUrl: this.back
