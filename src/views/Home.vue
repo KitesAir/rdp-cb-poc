@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     prepareUrl(){
-      this.axios.get('https://reqres.in/api/products/' + this.transaction_id).then((response) => {
+      this.axios.get('http://103.48.193.123:6699/reddot/info?trans=' + this.transaction_id).then((response) => {
         this.response = response.data.response
         this.status = response.data.status
         this.cbid = response.data.transactionIdCB
