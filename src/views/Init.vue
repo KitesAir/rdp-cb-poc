@@ -35,7 +35,6 @@ export default {
   data() {
       return {
           resId: this.$route.query.resId,
-          amount: this.$route.query.amount,
           back: this.$route.query.back,
       }
   },
@@ -46,7 +45,6 @@ export default {
         url: 'http://103.48.193.123:6699/reddot/payment',
         data: {
           reservationId: this.resId,
-          amount: this.amount,
           targetUrl: this.back
         }
       }).then((response) => {
