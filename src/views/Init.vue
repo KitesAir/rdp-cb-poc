@@ -53,7 +53,7 @@ export default {
       })
     }
   },
-  mounted: function(){
+  beforeMount: function(){
     this.prepareUrl()
   }
 }
