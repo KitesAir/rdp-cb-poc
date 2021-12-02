@@ -43,7 +43,7 @@ export default {
         url: 'https://rdp-cb.herokuapp.com/genPaymentPage',
         data: {
           reservationId: this.reservationId,
-          amount: this.amount
+          amount: this.amount.toString()
         }
       }).then((response) => {
         this.paymentLink = response.data.redirect
