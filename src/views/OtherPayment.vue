@@ -11,7 +11,7 @@
   <p>Reservation is: {{ reservationId }}</p>
   <p>Amount: <input v-model="amount" placeholder="Input amount"></p>
   <button v-on:click="postPayment()">Generate PAYMENT link</button>
-  <a v-bind:href="paymentLink">
+  <a v-bind:href="paymentLink"></a>
 </div>
   </div>
 </template>
