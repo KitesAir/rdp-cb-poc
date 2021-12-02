@@ -28,20 +28,12 @@ export default {
   methods: {
     getInfo(){
       this.axios({
-        method: 'post',
-        url: 'https://rdp-cb.herokuapp.com/payment',
-        data: {
-          reservationId: this.resId,
-          targetUrl: this.back
-        }
+        method: 'get',
+        url: 'https://rdp-cb.herokuapp.com/resInfo?reservationID=' + this.reservationId,
       }).then((response) => {
-        console.log(response.data)
-        window.location.href = response.data.redirect
+        this.detail = response.data
       })
     }
-  },
-  beforeMount: function(){
-
   }
 }
 </script>
