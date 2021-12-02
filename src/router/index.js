@@ -10,6 +10,11 @@ const routes = [
     path: '/init',
     name: 'init',
     component: () => import(/* webpackChunkName: "about" */ '../views/Init.vue')
+  },
+  {
+    path: '/other-payment',
+    name: 'other-payment',
+    component: () => import(/* webpackChunkName: "about" */ '../views/OtherPayment.vue')
   }
 ]
 
