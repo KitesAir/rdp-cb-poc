@@ -12,7 +12,7 @@
   <p>Amount: <input v-model="amount" placeholder="Input amount"></p>
   <button v-on:click="postPayment()">Generate PAYMENT link</button>
   <br/>
-  <a v-bind:href="paymentLink">{{paymentLink}}</a>
+  <a target="_blank" rel="noopener noreferrer" v-bind:href="paymentLink">{{paymentLink}}</a>
 </div>
   </div>
 </template>
