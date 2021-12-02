@@ -11,7 +11,7 @@
   <p>Reservation is: {{ reservationId }}</p>
   <p>Amount: <input v-model="amount" placeholder="Input amount"></p>
   <button v-on:click="postPayment()">Generate PAYMENT link</button>
-  <a v-bind:href="paymentLink"></a>
+  <a v-bind:href="paymentLink">{{paymentLink}}</a>
 </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
           reservationId: '',
           detail: '',
           amount: '',
-          paymentLink: '',
+          paymentLink: '#',
       }
   },
   methods: {
@@ -40,7 +40,7 @@ export default {
     postPayment(){
       this.axios({
         method: 'post',
-        url: 'https://rdp-cb.herokuapp.com//genPaymentPage',
+        url: 'https://rdp-cb.herokuapp.com/genPaymentPage',
         data: {
           reservationId: this.reservationId,
           amount: this.amount
